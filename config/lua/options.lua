@@ -11,6 +11,7 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = false -- 검색 결과 전체 하이라이팅 X
 vim.opt.incsearch = true -- 점진적 하이라이팅
 vim.opt.termguicolors = true  -- enable true color support
+vim.opt.splitright = true
 
 vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
     pattern = "*.py",

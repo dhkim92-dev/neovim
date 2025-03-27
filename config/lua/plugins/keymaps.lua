@@ -18,3 +18,13 @@ vim.keymap.set("v", "<C-_>", ":lua require('Comment.api').toggle.blockwise(vim.f
 
 -- markdown
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
+
+-- copilot chat
+vim.keymap.set("n", "<leader>zc", ":CopilotChatToggle<cr>")
+vim.keymap.set("n", "<leader>zr", ":CopilotChatReset<cr>")
+vim.keymap.set("n", "<leader>zm", ":CopilotChatModel<cr>")
+vim.keymap.set("v", "<leader>zr", ":CopilotChatReview<cr>")
+vim.keymap.set("v", "<leader>ze", ":CopilotChatExplain<cr>")
+vim.keymap.set("v", "<leader>zf", ":CopilotChatFix<cr>")
+vim.keymap.set("v", "<leader>zt", ":CopilotChatTest<cr>")
+vim.keymap.set("v", "<leader>zo", ":CopilotChatOptimize<cr>")

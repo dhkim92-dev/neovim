@@ -16,6 +16,34 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- copilotchat 
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+    },
+    build = "make tiktoken", -- Only on MacOS or Linux
+    opts = {
+      view = {
+        side = "right"
+      },
+      -- See Configuration section for options
+      prompts = {
+        Rename = {
+          prompt = "Please rename the variable correctly in given section based on context",
+          section = function(source) 
+            local select = require('CopilotChat.select')
+            return select.visual(source)
+          end,
+        },
+      },
+    },
+
+  },
+
+  --
+    { "github/copilot.vim" },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     { "nvim-telescope/telescope.nvim", tag = "0.1.8", dependencies = { "nvim-lua/plenary.nvim" }},
 
