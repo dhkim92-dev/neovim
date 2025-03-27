@@ -17,6 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- copilotchat 
+  {"nvim-java/nvim-java"},
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
@@ -105,6 +106,8 @@ cmp.setup({
     { name = 'luasnip' },  -- LuaSnip에서 자동 완성
   },
 })
+
+require('java').setup()
 
 local luasnip = require('luasnip')
 
